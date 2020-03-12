@@ -8,7 +8,7 @@ class Plant(models.Model):
     location=models.CharField(max_length=50)
     img=models.ImageField(upload_to=None)
     others=models.CharField(max_length=100)
-    Owner=models.ForeignKey(User, on_delete=models.CASCADE, related_name='my_plants')
+    owner=models.ForeignKey(User, on_delete=models.CASCADE, related_name='my_plants')
 
 class Watering(models.Model):
     date=models.DateTimeField(auto_now=False, auto_now_add=False)
