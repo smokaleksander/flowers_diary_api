@@ -1,15 +1,15 @@
 from django.db import models
-from species.models import Specie
-from users.models import User
+
 # Create your models here.
 class Plant(models.Model):
-    nickname=models.CharField(max_length=50, blank=True)
-    specie=models.ForeignKey(Specie, on_delete=models.CASCADE)
-    location=models.CharField(max_length=50)
-    img=models.ImageField(upload_to=None)
-    others=models.CharField(max_length=100)
-    owner=models.ForeignKey(User, on_delete=models.CASCADE, related_name='my_plants')
-
-class Watering(models.Model):
-    date=models.DateTimeField(auto_now=False, auto_now_add=False)
-    plant=models.ForeignKey(Plant, on_delete=models.CASCADE, related_name='waterings')
+    common_name=models.CharField( max_length=50)
+    science_name=models.CharField( max_length=50)
+    temp_min=models.FloatField()
+    temp_max=models.FloatField()
+    shade_tollerance=models.CharField( max_length=50)
+    precipitation_min=models.FloatField()
+    precipitation_max=models.FloatField()
+    ph_min=models.FloatField()
+    ph_max=models.FloatField()
+    growth_period=models.CharField( max_length=50)
+    toxicity=models.CharField( max_length=50)

@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
-from species import views
+from plants import views
 
 urlpatterns = [
-    path('species/<int:pk</', views.SpecieDetail.as_view())
+    path('userplants/<int:pk</', views.PlantDetail.as_view())
 ]
