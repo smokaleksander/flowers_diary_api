@@ -89,7 +89,7 @@ class UserPlants(APIView):
         #else    
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class PlantsDetail(APIView):
+class UserPlantsDetail(APIView):
 
     def get_object(self, id):
         try:
