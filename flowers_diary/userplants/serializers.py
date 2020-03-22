@@ -3,5 +3,4 @@ from .models import Plant
 
 class UserplantSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Userplant
-        fields='__all__'
+        model=['id','Userplant','fields','plant','location','img','info','owner']
